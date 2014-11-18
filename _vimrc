@@ -1,4 +1,3 @@
-set langmenu=none
 set nocompatible
 filetype off
 behave mswin
@@ -31,6 +30,8 @@ colorscheme moria
 set background=dark
 set guifont=Terminus:h11
 set cursorline
+set guioptions-=m " fuck gui
+set guioptions-=T 
 
 syntax on
 set hlsearch
@@ -150,3 +151,8 @@ else
   let paste#paste_cmd['v'] = '"-c<Esc>gix<Esc>' . paste#paste_cmd['n'] . '"_x'
   let paste#paste_cmd['i'] = 'x<Esc>' . paste#paste_cmd['n'] . '"_s'
 endi
+
+inoremap <A-h> <left>
+inoremap <A-j> <down>
+inoremap <A-k> <up>
+inoremap <A-l> <right>
